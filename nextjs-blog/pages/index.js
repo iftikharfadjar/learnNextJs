@@ -12,7 +12,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({allPostData}) {
+export default function Home({allPostsData}) {
   return (
     <Layout home>
       <Head>
@@ -28,7 +28,7 @@ export default function Home({allPostData}) {
       <section className ={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
-          {allPostData.map(({id, date, title}) => (
+          {allPostsData.map(({id, date, title}) => (
             <li className={utilStyles.listItem} key={id}>
             {title}
             <br />
